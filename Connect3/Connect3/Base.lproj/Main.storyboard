@@ -32,18 +32,70 @@
                                     <constraint firstAttribute="height" constant="320" id="m22-t1-HgM"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squirtle: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6J-Xk-YYs">
+                                <rect key="frame" x="125" y="59" width="79" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmander: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikH-g8-oqL">
+                                <rect key="frame" x="243" y="59" width="114.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3d-1M-mjJ">
+                                <rect key="frame" x="388" y="50.5" width="87" height="38"/>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.88235294117647056" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" white="0.18397923520000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is Squirtle's turn." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx7-eY-tHr">
+                                <rect key="frame" x="228" y="520.5" width="143" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are Squirtle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVR-Qt-Rb8">
+                                <rect key="frame" x="239" y="490" width="121" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89411764705882346" green="0.96862745098039216" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="v3d-1M-mjJ" firstAttribute="centerY" secondItem="ikH-g8-oqL" secondAttribute="centerY" id="04a-Fg-fT7"/>
+                            <constraint firstItem="wzR-Rj-BII" firstAttribute="top" secondItem="v3d-1M-mjJ" secondAttribute="bottom" constant="45" id="6P7-lQ-uhw"/>
+                            <constraint firstItem="ikH-g8-oqL" firstAttribute="leading" secondItem="k6J-Xk-YYs" secondAttribute="trailing" constant="8" symbolic="YES" id="JAZ-VI-55l"/>
+                            <constraint firstItem="wzR-Rj-BII" firstAttribute="leading" secondItem="k6J-Xk-YYs" secondAttribute="leading" id="OkM-NT-7qU"/>
+                            <constraint firstItem="v3d-1M-mjJ" firstAttribute="trailing" secondItem="wzR-Rj-BII" secondAttribute="trailing" id="Qmm-dV-rRM"/>
+                            <constraint firstItem="wzR-Rj-BII" firstAttribute="top" secondItem="ikH-g8-oqL" secondAttribute="bottom" constant="45" id="SVp-Q1-MXQ"/>
+                            <constraint firstItem="uVR-Qt-Rb8" firstAttribute="top" secondItem="wzR-Rj-BII" secondAttribute="bottom" constant="15" id="Syr-2N-Ex5"/>
+                            <constraint firstItem="Xx7-eY-tHr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UlV-KS-nHo"/>
+                            <constraint firstItem="Xx7-eY-tHr" firstAttribute="top" secondItem="uVR-Qt-Rb8" secondAttribute="bottom" constant="10" id="V1y-zc-FlP"/>
                             <constraint firstItem="z3D-Gg-zhZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VDw-um-YPR"/>
                             <constraint firstItem="wzR-Rj-BII" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VLn-bW-o2U"/>
                             <constraint firstItem="z3D-Gg-zhZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZNb-Es-l18"/>
+                            <constraint firstItem="uVR-Qt-Rb8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZkX-fQ-t39"/>
+                            <constraint firstItem="ikH-g8-oqL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zl3-UV-5P7"/>
                             <constraint firstItem="wzR-Rj-BII" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aTC-86-3yv"/>
+                            <constraint firstItem="wzR-Rj-BII" firstAttribute="top" secondItem="k6J-Xk-YYs" secondAttribute="bottom" constant="45" id="omu-Ms-cZr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6P7-lQ-uhw"/>
+                                <exclude reference="JAZ-VI-55l"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="296"/>
         </scene>
     </scenes>
     <resources>
