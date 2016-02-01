@@ -92,6 +92,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="charmanderScore" destination="ikH-g8-oqL" id="30N-LW-Fvv"/>
+                        <outlet property="squirtleScore" destination="k6J-Xk-YYs" id="2OY-AG-LaG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

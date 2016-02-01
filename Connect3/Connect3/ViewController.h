@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *squirtleScore;
+@property (weak, nonatomic) IBOutlet UILabel *charmanderScore;
 
 @end
 

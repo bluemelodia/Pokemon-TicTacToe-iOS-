@@ -14,6 +14,8 @@
 		4AA066291C6000680016C372 /* Connect3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA066271C6000680016C372 /* Connect3.xcdatamodeld */; };
 		4AA0662B1C6000680016C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0662A1C6000680016C372 /* Assets.xcassets */; };
 		4AA0662E1C6000680016C372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0662C1C6000680016C372 /* LaunchScreen.storyboard */; };
+		4AA0663D1C600CA30016C372 /* GridCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0663B1C600CA30016C372 /* GridCollectionViewController.m */; };
+		4AA0663E1C600CA30016C372 /* GridCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0663C1C600CA30016C372 /* GridCollectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		4AA0662A1C6000680016C372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AA0662D1C6000680016C372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AA0662F1C6000680016C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AA0663A1C600CA30016C372 /* GridCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewController.h; sourceTree = "<group>"; };
+		4AA0663B1C600CA30016C372 /* GridCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewController.m; sourceTree = "<group>"; };
+		4AA0663C1C600CA30016C372 /* GridCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridCollectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,9 @@
 				4AA0661F1C6000680016C372 /* AppDelegate.m */,
 				4AA066211C6000680016C372 /* ViewController.h */,
 				4AA066221C6000680016C372 /* ViewController.m */,
+				4AA0663A1C600CA30016C372 /* GridCollectionViewController.h */,
+				4AA0663B1C600CA30016C372 /* GridCollectionViewController.m */,
+				4AA0663C1C600CA30016C372 /* GridCollectionViewController.xib */,
 				4AA066241C6000680016C372 /* Main.storyboard */,
 				4AA0662A1C6000680016C372 /* Assets.xcassets */,
 				4AA0662C1C6000680016C372 /* LaunchScreen.storyboard */,
@@ -139,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA0663E1C600CA30016C372 /* GridCollectionViewController.xib in Resources */,
 				4AA0662E1C6000680016C372 /* LaunchScreen.storyboard in Resources */,
 				4AA0662B1C6000680016C372 /* Assets.xcassets in Resources */,
 				4AA066261C6000680016C372 /* Main.storyboard in Resources */,
@@ -152,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA0663D1C600CA30016C372 /* GridCollectionViewController.m in Sources */,
 				4AA066231C6000680016C372 /* ViewController.m in Sources */,
 				4AA066201C6000680016C372 /* AppDelegate.m in Sources */,
 				4AA066291C6000680016C372 /* Connect3.xcdatamodeld in Sources */,
@@ -302,6 +312,7 @@
 				4AA066341C6000680016C372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

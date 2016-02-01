@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GridCollectionViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    GridCollectionViewController *gridVC;
+}
 
 @end
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    gridVC = [[GridCollectionViewController alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
