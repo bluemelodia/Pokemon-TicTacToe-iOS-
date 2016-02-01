@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *squirtleScore;
 @property (weak, nonatomic) IBOutlet UILabel *charmanderScore;
+@property (weak, nonatomic) IBOutlet UICollectionView *gridView;
 
 @end
 

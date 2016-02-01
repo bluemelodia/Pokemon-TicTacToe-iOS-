@@ -7,10 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "GridCollectionViewController.h"
 
 @interface ViewController () {
-    GridCollectionViewController *gridVC;
 }
 
 @end
@@ -19,13 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    gridVC = [[GridCollectionViewController alloc] init];
+    NSLog(@"Ever come here");
+    
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [self.gridView setCollectionViewLayout:flow];
+    [self.gridView setBackgroundColor:[UIColor clearColor]];
+
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)resetClicked:(id)sender {
+    NSLog(@"HERE");
 }
 
 @end

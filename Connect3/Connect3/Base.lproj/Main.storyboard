@@ -44,17 +44,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3d-1M-mjJ">
-                                <rect key="frame" x="388" y="50.5" width="87" height="38"/>
-                                <color key="backgroundColor" red="0.67843137254901964" green="0.88235294117647056" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" title="RESTART">
-                                    <color key="titleColor" white="0.18397923520000001" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is Squirtle's turn." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx7-eY-tHr">
-                                <rect key="frame" x="228" y="520.5" width="143" height="20.5"/>
+                                <rect key="frame" x="228" y="520" width="143" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,12 +56,50 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3d-1M-mjJ">
+                                <rect key="frame" x="388" y="51" width="87" height="38"/>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.88235294117647056" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" white="0.18397923520000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqK-sM-zso"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PuX-Ka-FCp">
+                                <rect key="frame" x="140" y="140" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="VwQ-v9-4SO"/>
+                                    <constraint firstAttribute="width" constant="320" id="uKG-cm-G8f"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FOR-1I-dn6">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cAr-hU-l4A">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.89411764705882346" green="0.96862745098039216" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v3d-1M-mjJ" firstAttribute="centerY" secondItem="ikH-g8-oqL" secondAttribute="centerY" id="04a-Fg-fT7"/>
                             <constraint firstItem="wzR-Rj-BII" firstAttribute="top" secondItem="v3d-1M-mjJ" secondAttribute="bottom" constant="45" id="6P7-lQ-uhw"/>
+                            <constraint firstItem="PuX-Ka-FCp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GsY-XS-bA8"/>
                             <constraint firstItem="ikH-g8-oqL" firstAttribute="leading" secondItem="k6J-Xk-YYs" secondAttribute="trailing" constant="8" symbolic="YES" id="JAZ-VI-55l"/>
+                            <constraint firstItem="PuX-Ka-FCp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LIA-oP-cyD"/>
                             <constraint firstItem="wzR-Rj-BII" firstAttribute="leading" secondItem="k6J-Xk-YYs" secondAttribute="leading" id="OkM-NT-7qU"/>
                             <constraint firstItem="v3d-1M-mjJ" firstAttribute="trailing" secondItem="wzR-Rj-BII" secondAttribute="trailing" id="Qmm-dV-rRM"/>
                             <constraint firstItem="wzR-Rj-BII" firstAttribute="top" secondItem="ikH-g8-oqL" secondAttribute="bottom" constant="45" id="SVp-Q1-MXQ"/>
@@ -94,6 +123,7 @@
                     </view>
                     <connections>
                         <outlet property="charmanderScore" destination="ikH-g8-oqL" id="30N-LW-Fvv"/>
+                        <outlet property="gridView" destination="PuX-Ka-FCp" id="J0C-f3-YWs"/>
                         <outlet property="squirtleScore" destination="k6J-Xk-YYs" id="2OY-AG-LaG"/>
                     </connections>
                 </viewController>
