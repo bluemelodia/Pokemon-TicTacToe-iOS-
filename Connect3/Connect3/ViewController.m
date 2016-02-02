@@ -73,12 +73,9 @@
     if (turn == 0) { // squirtle's turn
         [cell setCellImageByState:1];
         tiles[indexPath.row] = Squirtle;
-        NSLog(@"SQUIRTLE");
     } else { // charmander's turn
         [cell setCellImageByState:2];
         tiles[indexPath.row] = Charmander;
-        NSLog(@"CHARMANDER");
-        [self didWin];
     }
     if (![self didWin]) {
         [self checkTurn];
@@ -125,19 +122,32 @@
     
     if (winner == 1) {
         NSLog(@"SQUIRTLE WINS");
-        squirtleScore = squirtleScore+1;
-        NSString *squirtle = [NSString stringWithFormat:@"Squirtle: %d", squirtleScore];
+        sScore++;
+        NSString *squirtle = [NSString stringWithFormat:@"Squirtle: %d", sScore];
         [self.squirtleScore setText:squirtle];
         self.gridView.userInteractionEnabled = NO;
         return true;
     } else if (winner == 2) {
         NSLog(@"CHARMANDER WINS");
-        charmanderScore = charmanderScore+1;
-        NSString *charmander = [NSString stringWithFormat:@"Charmander: %d", charmanderScore];
+        cScore++;
+        NSString *charmander = [NSString stringWithFormat:@"Charmander: %d", cScore];
         [self.charmanderScore setText:charmander];
         self.gridView.userInteractionEnabled = NO;
         return true;
     }
+    
+    // check if all positions filled
+    BOOL hasZeroes = false;
+    for (int i = 0; i < 9; i++) {
+        if (tiles[i] == Empty) {
+            hasZeroes = true;
+        }
+    }
+    if (!hasZeroes) {
+        NSLog(@"Tie!");
+        return true;
+    }
+    
     return false;
 }
 

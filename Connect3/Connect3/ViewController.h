@@ -14,8 +14,8 @@ enum tileStates {
     Charmander = 2
 };
 
-static int squirtleScore = 0;
-static int charmanderScore = 0;
+static int sScore = 0;
+static int cScore = 0;
 static int turn = 0;
 static int gameOver = 0;
 
