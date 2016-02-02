@@ -103,7 +103,11 @@
 }
 
 - (IBAction)resetClicked:(id)sender {
-    NSLog(@"HERE");
+    // erase the board
+    NSArray *cells = [self.gridView visibleCells];
+    for (GridCollectionViewCell *cell in cells) {
+        [cell setCellImageByState:0];
+    }
 }
 
 @end
