@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+enum tileStates {
+    Empty = 0,
+    Squirtle = 1,
+    Charmander = 2
+};
+
 @interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *squirtleScore;

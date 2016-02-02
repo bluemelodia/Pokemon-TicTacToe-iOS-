@@ -13,12 +13,19 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    int tiles[9];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"Ever come here");
     
+    // initialize the tile states to empty
+    for (int i = 0; i < 9; i++) {
+        tiles[i] = Empty;
+    }
+
     // change the transparency and tint to more closely match the Android version
     [self.backgroundImage setAlpha:0.5];
     self.gridImage.image = [self.gridImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -27,19 +34,6 @@
     // prepare the collection view flow layout
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     flow.itemSize = CGSizeMake(100, 100);
-    
-    /*
-     flow.sectionInset = UIEdgeInsetsMake(screenHeight*0.05, screenWidth*0.05, screenHeight*0.05, screenWidth*0.05);
-     flow.minimumLineSpacing = screenHeight*0.04;
-     
-     if (iDevice == iPhone) {
-     flow.itemSize = CGSizeMake(160, 198);
-     flow.sectionInset = UIEdgeInsetsMake(screenHeight*0.05, screenWidth*0.05, screenHeight*0.05, screenWidth*0.05);
-     } else {
-     flow.itemSize = CGSizeMake(200, 240);
-     flow.sectionInset = UIEdgeInsetsMake(screenHeight*0.05, screenWidth*0.06, screenHeight*0.05, screenWidth*0.06);
-     }
-     */
     
     [self.gridView setCollectionViewLayout:flow];
     [self.gridView setBackgroundColor:[UIColor clearColor]];
@@ -64,30 +58,11 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GridCollectionViewCell *cell = [self.gridView dequeueReusableCellWithReuseIdentifier:@"GridCollectionViewCell" forIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor redColor]];
-    /*DrugCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DrugCollectionViewCell" forIndexPath:indexPath];
-    [cell setImage:[medArray objectAtIndex:indexPath.row]];
-    cell.layer.borderColor = [[UIColor clearColor]CGColor];
-    
-    if (products != nil) {
-        NSArray *_drugIDs = [NovartisUtils getValue:[products valueForKey:@"product-id"] default:@[]];
-        if (indexPath.row >= [_drugIDs count]) {
-            [cell setProductLabel:@""];
-            [cell setCellType:MenuCellType];
-        } else {
-            NSArray *_drugPrescription = [[NovartisUtils getValue:[products valueForKey:@"prescription_label_title"] default:@[]] mutableCopy];
-            NSString *drugLabel = [[NSMutableString alloc] initWithString:[NSString stringWithFormat:@"\u24D8 %@\n", [NovartisUtils getValue:[_drugPrescription objectAtIndex:indexPath.row] default:@"Full Prescribing Info"]]];
-            if ([drugLabel containsString:@"Warning"]) {
-                drugLabel = [drugLabel stringByReplacingOccurrencesOfString:@"Warning" withString:@"WARNING"];
-            }
-            [cell setProductLabel:drugLabel];
-            [cell setCellType:RegularCellType];
-            [cell setProductID:[_drugIDs objectAtIndex:indexPath.row]];
-        }
-        [cell setCellDelegate:self];
+    int state = tiles[indexPath.row];
+    [cell setCellImageByState:state];
+    if (state != 0) {
+        cell.userInteractionEnabled = NO;
     }
-    
-    return cell;*/
     return cell;
 }
 

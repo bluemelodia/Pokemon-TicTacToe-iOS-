@@ -12,8 +12,22 @@
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1eY-JY-h67">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1eY-JY-h67" secondAttribute="bottom" id="1G6-K5-3Z0"/>
+                <constraint firstItem="1eY-JY-h67" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cNN-YS-RFx"/>
+                <constraint firstAttribute="trailing" secondItem="1eY-JY-h67" secondAttribute="trailing" id="cpQ-4e-GoC"/>
+                <constraint firstItem="1eY-JY-h67" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dMa-hi-nbA"/>
+            </constraints>
+            <connections>
+                <outlet property="cellImage" destination="1eY-JY-h67" id="UL6-GP-klm"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

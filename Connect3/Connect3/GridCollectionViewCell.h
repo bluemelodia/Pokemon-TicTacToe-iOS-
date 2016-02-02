@@ -10,4 +10,8 @@
 
 @interface GridCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *cellImage;
+
+- (void)setCellImageByState:(int) state;
+
 @end
