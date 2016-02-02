@@ -68,20 +68,38 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Click");
-    //    UITableViewCell *cell = [self.mutArray objectAtIndex:indexPath.row];
-    
     GridCollectionViewCell *cell = (GridCollectionViewCell *) [self.gridView cellForItemAtIndexPath:indexPath];
     NSLog(@"%@", indexPath);
     // turn 0 = Squirtle, turn 1 = Charmander
     if (turn == 0) { // squirtle's turn
         [cell setCellImageByState:1];
+        tiles[indexPath.row] = Squirtle;
         NSLog(@"SQUIRTLE");
-        turn = 1;
     } else { // charmander's turn
         [cell setCellImageByState:2];
+        tiles[indexPath.row] = Charmander;
         NSLog(@"CHARMANDER");
-        turn = 0;
+        [self didWin];
     }
+    if (![self didWin]) {
+        [self checkTurn];
+    }
+}
+
+- (void)checkTurn {
+    if (turn == 0) {
+        turn = 1;
+        [self.you setText:@"You are Charmander."];
+        [self.whoseTurn setText:@"It is Charmander's turn."];
+    } else {
+        turn = 0;
+        [self.you setText:@"You are Squirtle."];
+        [self.whoseTurn setText:@"It is Squirtle's turn."];
+    }
+}
+
+- (BOOL)didWin {
+    return false;
 }
 
 - (IBAction)resetClicked:(id)sender {

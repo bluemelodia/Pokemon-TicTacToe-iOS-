@@ -26,6 +26,8 @@ static int gameOver = 0;
 @property (weak, nonatomic) IBOutlet UICollectionView *gridView;
 @property (weak, nonatomic) IBOutlet UIImageView *gridImage;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UILabel *you;
+@property (weak, nonatomic) IBOutlet UILabel *whoseTurn;
 
 @end
 

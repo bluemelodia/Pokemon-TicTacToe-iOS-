@@ -131,6 +131,8 @@
                         <outlet property="gridImage" destination="z3D-Gg-zhZ" id="3Mf-bc-Rgf"/>
                         <outlet property="gridView" destination="PuX-Ka-FCp" id="J0C-f3-YWs"/>
                         <outlet property="squirtleScore" destination="k6J-Xk-YYs" id="2OY-AG-LaG"/>
+                        <outlet property="whoseTurn" destination="Xx7-eY-tHr" id="hQn-pk-koa"/>
+                        <outlet property="you" destination="uVR-Qt-Rb8" id="1Py-gq-S7s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
