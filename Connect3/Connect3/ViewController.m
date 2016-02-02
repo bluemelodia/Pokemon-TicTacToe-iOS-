@@ -26,6 +26,21 @@
 
     // prepare the collection view flow layout
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    flow.itemSize = CGSizeMake(100, 100);
+    
+    /*
+     flow.sectionInset = UIEdgeInsetsMake(screenHeight*0.05, screenWidth*0.05, screenHeight*0.05, screenWidth*0.05);
+     flow.minimumLineSpacing = screenHeight*0.04;
+     
+     if (iDevice == iPhone) {
+     flow.itemSize = CGSizeMake(160, 198);
+     flow.sectionInset = UIEdgeInsetsMake(screenHeight*0.05, screenWidth*0.05, screenHeight*0.05, screenWidth*0.05);
+     } else {
+     flow.itemSize = CGSizeMake(200, 240);
+     flow.sectionInset = UIEdgeInsetsMake(screenHeight*0.05, screenWidth*0.06, screenHeight*0.05, screenWidth*0.06);
+     }
+     */
+    
     [self.gridView setCollectionViewLayout:flow];
     [self.gridView setBackgroundColor:[UIColor clearColor]];
 
@@ -49,7 +64,6 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GridCollectionViewCell *cell = [self.gridView dequeueReusableCellWithReuseIdentifier:@"GridCollectionViewCell" forIndexPath:indexPath];
-    NSLog(@"Click");
     [cell setBackgroundColor:[UIColor redColor]];
     /*DrugCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DrugCollectionViewCell" forIndexPath:indexPath];
     [cell setImage:[medArray objectAtIndex:indexPath.row]];
@@ -78,6 +92,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Click");
     /*if (indexPath.row == [medArray count]-2) {
         [self openPracticeResources];
     } else if (indexPath.row == [medArray count]-1) {
