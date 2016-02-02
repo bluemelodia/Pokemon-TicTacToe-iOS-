@@ -121,18 +121,18 @@
     }
     
     if (winner == 1) {
-        NSLog(@"SQUIRTLE WINS");
         sScore++;
         NSString *squirtle = [NSString stringWithFormat:@"Squirtle: %d", sScore];
         [self.squirtleScore setText:squirtle];
         self.gridView.userInteractionEnabled = NO;
+        [self showAlert:@"Squirtle wins!"];
         return true;
     } else if (winner == 2) {
-        NSLog(@"CHARMANDER WINS");
         cScore++;
         NSString *charmander = [NSString stringWithFormat:@"Charmander: %d", cScore];
         [self.charmanderScore setText:charmander];
         self.gridView.userInteractionEnabled = NO;
+        [self showAlert:@"Charmander wins!"];
         return true;
     }
     
@@ -144,11 +144,20 @@
         }
     }
     if (!hasZeroes) {
-        NSLog(@"Tie!");
+        [self showAlert:@"It's a tie!"];
         return true;
     }
-    
     return false;
+}
+
+- (void) showAlert:(NSString *) message {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Game Over" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        NSLog(@"You pressed button OK");
+    }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil]; // 11
 }
 
 - (IBAction)resetClicked:(id)sender {
