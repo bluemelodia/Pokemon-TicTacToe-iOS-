@@ -17,14 +17,17 @@
 - (void)setCellImageByState:(int) state {
     UIImage *image;
     if (state == 0) {
-        [UIImage imageNamed:@"Pokeball.imageset"];
+        image = [UIImage imageNamed:@"Pokeball.imageset"];
         [self.cellImage setImage:image];
+        [self.cellImage setAlpha:0.2];
     } else if (state == 1) {
-        [UIImage imageNamed:@"Squirtle.imageset"];
+        image = [UIImage imageNamed:@"Squirtle.imageset"];
         [self.cellImage setImage:image];
+        [self.cellImage setAlpha:1];
     } else {
-        [UIImage imageNamed:@"Charmander.imageset"];
+        image = [UIImage imageNamed:@"Charmander.imageset"];
         [self.cellImage setImage:image];
+        [self.cellImage setAlpha:1];
     }
 }
 
