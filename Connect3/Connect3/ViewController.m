@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Ever come here");
     
     // initialize the tile states to empty
     for (int i = 0; i < 9; i++) {
@@ -99,6 +98,46 @@
 }
 
 - (BOOL)didWin {
+    /*
+        Board layout:
+        0 1 2
+        3 4 5
+        6 7 8
+     */
+    int winner = -1;
+    if (tiles[0] == tiles[1] && tiles[1] == tiles[2] && tiles[0] != 0) {
+        winner = tiles[0];
+    } else if (tiles[3] == tiles[4] && tiles[4] == tiles[5] && tiles[3] != 0) {
+        winner = tiles[3];
+    } else if (tiles[6] == tiles[7] && tiles[7] == tiles[8] && tiles[6] != 0) {
+        winner = tiles[6];
+    } else if (tiles[0] == tiles[3] && tiles[3] == tiles[6] && tiles[0] != 0) {
+        winner = tiles[0];
+    } else if (tiles[1] == tiles[4] && tiles[4] == tiles[7] && tiles[1] != 0) {
+        winner = tiles[1];
+    } else if (tiles[2] == tiles[5] && tiles[5] == tiles[8] && tiles[2] != 0) {
+        winner = tiles[2];
+    } else if (tiles[0] == tiles[4] && tiles[4] == tiles[8] && tiles[0] != 0) {
+        winner = tiles[0];
+    } else if (tiles[2] == tiles[4] && tiles[4] == tiles[6] && tiles[2] != 0) {
+        winner = tiles[2];
+    }
+    
+    if (winner == 1) {
+        NSLog(@"SQUIRTLE WINS");
+        squirtleScore = squirtleScore+1;
+        NSString *squirtle = [NSString stringWithFormat:@"Squirtle: %d", squirtleScore];
+        [self.squirtleScore setText:squirtle];
+        self.gridView.userInteractionEnabled = NO;
+        return true;
+    } else if (winner == 2) {
+        NSLog(@"CHARMANDER WINS");
+        charmanderScore = charmanderScore+1;
+        NSString *charmander = [NSString stringWithFormat:@"Charmander: %d", charmanderScore];
+        [self.charmanderScore setText:charmander];
+        self.gridView.userInteractionEnabled = NO;
+        return true;
+    }
     return false;
 }
 
@@ -108,6 +147,10 @@
     for (GridCollectionViewCell *cell in cells) {
         [cell setCellImageByState:0];
     }
+    for (int i = 0; i < 9; i++) {
+        tiles[i] = Empty;
+    }
+    self.gridView.userInteractionEnabled = YES;
 }
 
 @end
