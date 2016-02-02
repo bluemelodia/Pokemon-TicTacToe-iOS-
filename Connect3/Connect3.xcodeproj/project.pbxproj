@@ -14,6 +14,8 @@
 		4AA066291C6000680016C372 /* Connect3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA066271C6000680016C372 /* Connect3.xcdatamodeld */; };
 		4AA0662B1C6000680016C372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0662A1C6000680016C372 /* Assets.xcassets */; };
 		4AA0662E1C6000680016C372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0662C1C6000680016C372 /* LaunchScreen.storyboard */; };
+		4AA0664C1C6017280016C372 /* GridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0664A1C6017280016C372 /* GridCollectionViewCell.m */; };
+		4AA0664D1C6017280016C372 /* GridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0664B1C6017280016C372 /* GridCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		4AA0662A1C6000680016C372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AA0662D1C6000680016C372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AA0662F1C6000680016C372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AA066491C6017280016C372 /* GridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewCell.h; sourceTree = "<group>"; };
+		4AA0664A1C6017280016C372 /* GridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewCell.m; sourceTree = "<group>"; };
+		4AA0664B1C6017280016C372 /* GridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,9 @@
 				4AA0661F1C6000680016C372 /* AppDelegate.m */,
 				4AA066211C6000680016C372 /* ViewController.h */,
 				4AA066221C6000680016C372 /* ViewController.m */,
+				4AA066491C6017280016C372 /* GridCollectionViewCell.h */,
+				4AA0664A1C6017280016C372 /* GridCollectionViewCell.m */,
+				4AA0664B1C6017280016C372 /* GridCollectionViewCell.xib */,
 				4AA066241C6000680016C372 /* Main.storyboard */,
 				4AA0662A1C6000680016C372 /* Assets.xcassets */,
 				4AA0662C1C6000680016C372 /* LaunchScreen.storyboard */,
@@ -139,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA0664D1C6017280016C372 /* GridCollectionViewCell.xib in Resources */,
 				4AA0662E1C6000680016C372 /* LaunchScreen.storyboard in Resources */,
 				4AA0662B1C6000680016C372 /* Assets.xcassets in Resources */,
 				4AA066261C6000680016C372 /* Main.storyboard in Resources */,
@@ -152,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA0664C1C6017280016C372 /* GridCollectionViewCell.m in Sources */,
 				4AA066231C6000680016C372 /* ViewController.m in Sources */,
 				4AA066201C6000680016C372 /* AppDelegate.m in Sources */,
 				4AA066291C6000680016C372 /* Connect3.xcdatamodeld in Sources */,

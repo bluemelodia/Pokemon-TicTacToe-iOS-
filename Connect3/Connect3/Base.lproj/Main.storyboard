@@ -122,7 +122,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="wzR-Rj-BII" id="eXo-EQ-DNl"/>
                         <outlet property="charmanderScore" destination="ikH-g8-oqL" id="30N-LW-Fvv"/>
+                        <outlet property="gridImage" destination="z3D-Gg-zhZ" id="3Mf-bc-Rgf"/>
                         <outlet property="gridView" destination="PuX-Ka-FCp" id="J0C-f3-YWs"/>
                         <outlet property="squirtleScore" destination="k6J-Xk-YYs" id="2OY-AG-LaG"/>
                     </connections>

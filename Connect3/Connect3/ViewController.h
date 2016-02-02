@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *squirtleScore;
 @property (weak, nonatomic) IBOutlet UILabel *charmanderScore;
 @property (weak, nonatomic) IBOutlet UICollectionView *gridView;
+@property (weak, nonatomic) IBOutlet UIImageView *gridImage;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
