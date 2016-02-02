@@ -20,14 +20,17 @@
         image = [UIImage imageNamed:@"Pokeball.imageset"];
         [self.cellImage setImage:image];
         [self.cellImage setAlpha:0.2];
+        self.userInteractionEnabled = YES;
     } else if (state == 1) {
         image = [UIImage imageNamed:@"Squirtle.imageset"];
         [self.cellImage setImage:image];
         [self.cellImage setAlpha:1];
+        self.userInteractionEnabled = NO;
     } else {
         image = [UIImage imageNamed:@"Charmander.imageset"];
         [self.cellImage setImage:image];
         [self.cellImage setAlpha:1];
+        self.userInteractionEnabled = NO;
     }
 }
 

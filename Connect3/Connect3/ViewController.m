@@ -68,11 +68,20 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Click");
-    /*if (indexPath.row == [medArray count]-2) {
-        [self openPracticeResources];
-    } else if (indexPath.row == [medArray count]-1) {
-        [self openInbox];
-    }*/
+    //    UITableViewCell *cell = [self.mutArray objectAtIndex:indexPath.row];
+    
+    GridCollectionViewCell *cell = (GridCollectionViewCell *) [self.gridView cellForItemAtIndexPath:indexPath];
+    NSLog(@"%@", indexPath);
+    // turn 0 = Squirtle, turn 1 = Charmander
+    if (turn == 0) { // squirtle's turn
+        [cell setCellImageByState:1];
+        NSLog(@"SQUIRTLE");
+        turn = 1;
+    } else { // charmander's turn
+        [cell setCellImageByState:2];
+        NSLog(@"CHARMANDER");
+        turn = 0;
+    }
 }
 
 - (IBAction)resetClicked:(id)sender {

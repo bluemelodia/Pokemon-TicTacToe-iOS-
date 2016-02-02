@@ -14,6 +14,11 @@ enum tileStates {
     Charmander = 2
 };
 
+static int squirtleScore = 0;
+static int charmanderScore = 0;
+static int turn = 0;
+static int gameOver = 0;
+
 @interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *squirtleScore;
